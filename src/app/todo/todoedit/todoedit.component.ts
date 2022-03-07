@@ -37,11 +37,11 @@ export class TodoeditComponent implements OnInit {
 
   editTodoForm() {
     this.editTodoFormGroup = new FormGroup({
-      _id: new FormControl({ value: this.server_response.data._id, disabled: true },Validators.required),
+      _id: new FormControl(this.server_response.data._id,Validators.required),
       title: new FormControl(this.server_response.data.title, Validators.required),
-      updatedAt:new FormControl({value:this.timestamp_string}),
+      updatedAt:new FormControl(this.timestamp_string),
     });
-    console.log('Edit Todo Form accessed');
+    console.log('Edit Todo Form accessed',this.editTodoFormGroup);
   }
 
   formData() {

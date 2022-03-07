@@ -26,6 +26,7 @@ export class TodoService {
 
   // update() {} Getting data and editting the existing data
   edit(data: Todo): Observable<ResponceData> {
+    console.log('Edit Service',data);
     return this.http.put<ResponceData>(`${this.BASE_URL}/${data._id}`, data, {
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
