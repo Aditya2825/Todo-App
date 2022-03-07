@@ -5,8 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AuthRoutingModule } from './auth/auth-routing.module';
+import { TodoRoutingModule } from './todo/todo-routing.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,9 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     HttpClientModule,
     AuthRoutingModule,
+    TodoRoutingModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="login-div">
+    <h5 class="login-header" >Sign In / Login</h5>
+    <div><ul><li><a [routerLink]="'/todoList'">Todo List</a></li></ul></div>
+
+    <div>
+
+        <form method="POST" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+
+            <table class="login-table">
+
+                <tr>
+                    <td><label class="style-label">Email Id: </label></td>
+                    <td><input type="email" id="loginUsername" class="loginInput" formControlName="emailid" ></td>
+                    <td>
+                        <div *ngIf="submitted && f.emailid.errors" class="invalid-feedback">
+                            <div *ngIf="f.emailid.errors.required">Email Id is required</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="style-label">Password: </label></td>
+                    <td><input type="password" id="loginPassword" class="loginInput" formControlName="password" ></td>
+                    <td>
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="login-Submit" class="btn" (click)="loginData()">Login</button></td>
+                    <td><button class="login-reset" type="reset" class="btn" (click)="onReset()">Reset</button></td>
+                </tr>
+                
+            </table>
+
+        </form>
+
+    </div>
+
+    <div>
+        <p><a [routerLink]="'/auth/register'">New User ?</a></p>
+    </div>
+
+</div>

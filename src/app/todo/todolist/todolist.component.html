@@ -1,0 +1,46 @@
+<div class="todos">
+
+    <div>
+        <form action=""  [formGroup]="newTodoForm">
+            <label for="Title form">Title: </label>
+            <input type="text" formControlName="title" required #title /><br />
+            <button type="submit" (click)="addNew()">Add New Data</button>
+        </form>
+    </div>
+
+    <div class="todoMain">
+        <div class="tododata" *ngFor="let td of response_data?.data;let i=index;">
+            <tr>
+                <td>S.No.</td>
+                <td>{{i}}</td>
+            </tr>
+            <tr>
+                <td>Id: </td>
+                <td>{{td._id}}</td>
+            </tr>
+            <tr>
+                <td>Title: </td>
+                <td>{{td.title}}</td>
+            </tr>
+            <tr>
+                <td>Is Completed: </td>
+                <td>{{td.isComplated}}</td>
+            </tr>
+            <tr>
+                <td>Created Date: </td>
+                <td>{{td.createdAt}}</td>
+            </tr>
+            <tr>
+                <td>Updation Date: </td>
+                <td>{{td.updatedAt}}</td>
+            </tr>
+            <br>
+            <tr>
+                <td><button class="edit" [routerLink]="['/todo/todoEdit',td._id]">Edit</button></td>
+                <td><button class="delete" (click)="deleteTodo(td._id)">Remove</button></td>
+            </tr>
+            <hr>           
+
+        </div>
+    </div>
+</div>

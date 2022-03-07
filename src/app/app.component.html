@@ -1,3 +1,19 @@
-<h1>Todo App</h1>
-<h3>App component</h3>
-<h4>new data</h4>
+
+<div class="navbar">
+    <div>
+        <h2>Todo App</h2>
+    </div>
+    <!--<div class="content">
+        <span>project app is running!</span>
+    </div>-->
+    <div>
+        <ul class="nav-ul">
+            <li class="nav-item"><a class="nav-link" [routerLink]="'/'">Home</a></li>
+            <li class="nav-item"><a class="nav-link" [routerLink]="'/auth/login'">Login</a></li>
+            <li class="nav-item"><a class="nav-link" [routerLink]="'/auth/register'">Register</a></li>
+        </ul>
+    </div>
+    <div><a href="" class="logout-button" (click)="logout()">Logout</a></div>
+</div>
+
+<router-outlet></router-outlet>

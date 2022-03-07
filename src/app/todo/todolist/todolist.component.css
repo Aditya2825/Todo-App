@@ -1,0 +1,16 @@
+.todo{
+    text-align: center;
+    display: flex;
+    background-color: rgb(175, 168, 182);
+    padding: 15px 20px;
+    border-bottom: 1px solid rgb(179, 136, 136);
+}
+.todoMain{
+    width:70%;
+    margin-top:50px;
+    padding:20px;
+    border:1px solid black;
+    
+}
+
+

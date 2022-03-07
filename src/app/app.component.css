@@ -1,0 +1,49 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.navbar{
+    background-color: #282A35;
+    display: grid;
+    grid-template-columns:2fr 12fr 1fr;
+    height: 50px;
+    line-height: 50px;
+}
+.navbar h2{
+    text-align: center;
+    color:white;
+}
+.nav-ul{
+    list-style: none;
+}
+.nav-item{
+    display:inline-block;
+}
+
+.nav-link{
+    background-color:#282A35;
+    color:white;
+    text-decoration: none;
+    font-size:24px;
+    width:100px;
+    display: block;
+    text-align: center;
+
+}
+.nav-link:hover{
+    background-color: black;
+
+}
+.logout-button{
+    color:White;
+    display: block;
+    text-decoration: none;
+    font-size:24px;
+    width:100px;
+    text-align: center;
+
+}
+.logout-button:hover{
+    background-color: black;
+
+}

@@ -1,0 +1,11 @@
+<div>
+  <div *ngIf="editTodoFormGroup">
+    <form action="" (ngSubmit)="editTodoForm()" [formGroup]="editTodoFormGroup">
+      <label for="ID">ID: </label>
+      <input type="text" formControlName="_id" required #title /><br />
+      <label for="Title">Title: </label>
+      <input type="text" formControlName="title" required #title /><br />
+      <button type="submit" (click)="formData()">Edit Save</button>
+    </form>
+  </div>
+</div>
